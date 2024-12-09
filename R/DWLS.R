@@ -35,7 +35,7 @@ build_model_dwls <- function(single_cell_object, cell_type_annotations,
   if (dwls_method == "mast") {
     return(DWLS::buildSignatureMatrixMAST(
       scdata = single_cell_object, id = cell_type_annotations, path = path,
-      verbose = verbose, ncores = ncores, diff.cutoff = diff_cutoff, pval.cutoff = pval_cutoff
+      verbose = verbose,  diff.cutoff = diff_cutoff, pval.cutoff = pval_cutoff
     ))
   } else if (dwls_method == "seurat") {
     return(DWLS::buildSignatureMatrixUsingSeurat(
